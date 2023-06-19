@@ -1,0 +1,100 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>cfd37e82-b5e2-4e7c-90c4-f6b2b25a589b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>DataAnalysis</Name>
+    <RootNamespace>DataAnalysis</RootNamespace>
+    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="chart\tools.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classification\D_Tree.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classification\GaussianProcesses.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classification\k_nearest_neighbors.py" />
+    <Compile Include="classification\mySGDClassifier.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classification\N_Byes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classification\Random_Forest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="classification\SVM.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clustering\Affinity_Propagation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clustering\agglomerative_clustering.py" />
+    <Compile Include="clustering\myBirch.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clustering\DBScan.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clustering\K_Means.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clustering\Mean_Shift.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clustering\OPTICS.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clustering\Spectral.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\Absenteeism_at_work.csv" />
+    <Content Include="data\bicycles.xlsx" />
+    <Content Include="data\cortex_nuclear.csv" />
+    <Content Include="data\Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.csv" />
+    <Content Include="data\heart.csv" />
+    <Content Include="data\Stars.csv" />
+    <Content Include="form.ui" />
+    <Content Include="data\iris.csv" />
+    <Content Include="requirements .txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="clustering\" />
+    <Folder Include="classification\" />
+    <Folder Include="data\" />
+    <Folder Include="chart\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.9" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
